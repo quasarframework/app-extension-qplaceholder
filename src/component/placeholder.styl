@@ -1,0 +1,122 @@
+// @import './placeholder-variables'
+
+.q-placeholder
+  color currentColor
+  font-family sans-serif
+  margin 24px auto
+  max-width 740px
+  pointer-events none
+  text-align justify
+  user-select none
+  line-height 1.6
+  background #f6f7f8
+  height 96px
+  position relative
+  background-size 800px 104px
+
+  &__word
+    background #eee
+    border-radius 3px
+    color #eee
+    font-size .9rem
+    letter-spacing .2rem
+    margin-right .5rem
+
+  &__masker
+    background #fff
+    position absolute
+
+/* Every thing below this is just positioning */
+
+.q-placeholder__masker.header-top,
+.q-placeholder__masker.header-bottom,
+.q-placeholder__masker.subheader-bottom
+  top 0
+  left 40px
+  right 0
+  height 10px
+
+.q-placeholder__masker.header-left,
+.q-placeholder__masker.subheader-left,
+.q-placeholder__masker.header-right,
+.q-placeholder__masker.subheader-right
+  top 10px
+  left 40px
+  height 8px
+  width 10px
+
+.q-placeholder__masker.header-bottom
+  top 18px
+  height 6px
+
+.q-placeholder__masker.subheader-left,
+.q-placeholder__masker.subheader-right
+  top 24px
+  height 8px
+
+
+.q-placeholder__masker.header-right,
+.q-placeholder__masker.subheader-right
+  width auto
+  left 80%
+  right 0
+
+.q-placeholder__masker.subheader-right
+  left 60%
+
+.q-placeholder__masker.subheader-bottom
+  top 32px
+  height 10px
+
+.q-placeholder__masker.content-top,
+.q-placeholder__masker.content-second-line,
+.q-placeholder__masker.content-third-line,
+.q-placeholder__masker.content-second-end,
+.q-placeholder__masker.content-third-end,
+.q-placeholder__masker.content-first-end
+  top 40px
+  left 0
+  right 0
+  height 6px
+
+.q-placeholder__masker.content-top
+  height 20px
+
+.q-placeholder__masker.content-first-end,
+.q-placeholder__masker.content-second-end,
+.q-placeholder__masker.content-third-end
+  width auto
+  left 75%
+  right 0
+  top 60px
+  height 8px
+
+.q-placeholder__masker.content-second-line
+  top 68px
+
+.q-placeholder__masker.content-second-end
+  left 90%
+  top 74px
+
+.q-placeholder__masker.content-third-line
+  top 82px
+
+.q-placeholder__masker.content-third-end
+  left 80%
+  top 88px
+
+@keyframes placeholderShimmer
+  0%{
+    background-position -800px 0
+  }
+  100%{
+    background-position 800px 0
+  }
+
+.q-placeholder.animated-background
+  animation-duration 3s
+  animation-fill-mode forwards
+  animation-iteration-count infinite
+  animation-name placeholderShimmer
+  animation-timing-function linear
+  background linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%)
