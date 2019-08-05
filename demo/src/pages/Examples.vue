@@ -2,7 +2,7 @@
   <hero>
     <div>
       <q-markdown>
-**QPlaceholder** allows for creating placeholder elements that are displayed before your data arirves from the server.
+**QPlaceholder** allows for creating placeholder elements that are displayed before your data arrives from the server.
 
 All line lengths are randomly generated between 50-95%, so no two QPlaceholder components will look exactly alike.
       </q-markdown>
