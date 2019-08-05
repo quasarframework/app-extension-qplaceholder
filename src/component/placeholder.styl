@@ -9,7 +9,7 @@
   text-align justify
   user-select none
   line-height 1.6
-  background #f6f7f8
+  background-color var(--placeholder-color, #cdcdcd)
   height 96px
   position relative
   background-size 800px 104px
@@ -23,7 +23,7 @@
     margin-right .5rem
 
   &__masker
-    background #fff
+    background var(--placeholder-bgcolor, #fff)
     position absolute
 
 /* Every thing below this is just positioning */
@@ -32,7 +32,7 @@
 .q-placeholder__masker.header-bottom,
 .q-placeholder__masker.subheader-bottom
   top 0
-  left 40px
+  left var(--placeholder-image-size, 40px)
   right 0
   height 10px
 
@@ -41,7 +41,7 @@
 .q-placeholder__masker.header-right,
 .q-placeholder__masker.subheader-right
   top 10px
-  left 40px
+  left var(--placeholder-image-size, 40px)
   height 8px
   width 10px
 
@@ -74,7 +74,7 @@
 .q-placeholder__masker.content-second-end,
 .q-placeholder__masker.content-third-end,
 .q-placeholder__masker.content-first-end
-  top 40px
+  top var(--placeholder-image-size, 40px)
   left 0
   right 0
   height 6px
