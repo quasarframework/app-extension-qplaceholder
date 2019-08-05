@@ -75,7 +75,10 @@ export default {
   components: {
     Basic: () => import('../examples/Basic'),
     Animated: () => import('../examples/Animated'),
-    ImageSize: () => import('../examples/ImageSize')
+    NoHeader: () => import('../examples/NoHeader'),
+    ImageSize: () => import('../examples/ImageSize'),
+    LineSizes: () => import('../examples/LineSizes'),
+    Colors: () => import('../examples/Colors')
   },
 
   props: {

@@ -2,19 +2,47 @@ import Vue from 'vue'
 
 // Styles
 import './placeholder.styl'
+import 'quasar-mixin-colorize/src/qColors.styl'
+
+import { Colorize, calculateColor } from 'quasar-mixin-colorize'
 
 export default function (ssrContext) {
   return Vue.extend({
     name: 'q-placeholder',
 
+    mixins: [Colorize],
+
     props: {
       value: Boolean, // visible/hide
-      imageSize: Number,
-      src: String,
-      minWords: Number,
       animated: Boolean,
-      contentStyle: [String, Object, Array],
-      contentClass: [String, Object, Array]
+      imageSize: {
+        type: Number,
+        default: 80,
+        validator: v => v > 0
+      },
+      rowHeight: {
+        type: Number,
+        default: 12,
+        validator: v => v > 0
+      },
+      dividerHeight: {
+        type: Number,
+        default: 12,
+        validator: v => v > 0
+      },
+      noHeader: Boolean,
+      color: {
+        type: String,
+        default: '#eee' // any color
+      },
+      backgroundColor: {
+        type: String,
+        default: '#fff' // any color
+      },
+      shimmerColor: {
+        type: String,
+        default: '#ddd'
+      }
     },
 
     data () {
@@ -37,9 +65,9 @@ export default function (ssrContext) {
       },
       styles () {
         let style = {}
-        if (this.imageSize !== void 0) {
-          style['--placeholder-image-size'] = this.imageSize + 'px'
-        }
+        style['--placeholder-color'] = calculateColor(this.color)
+        style['--placeholder-bgcolor'] = calculateColor(this.backgroundColor)
+        style['--placeholder-shimmercolor'] = calculateColor(this.shimmerColor)
         return style
       }
     },
@@ -80,6 +108,108 @@ export default function (ssrContext) {
             staticClass: `q-placeholder__masker ${type}`
           })
         })
+      },
+
+      __renderDivider (h, width, height) {
+        return h('div', {
+          staticClass: 'q-placeholder__divider',
+          style: {
+            width: width,
+            minHeight: height
+          }
+        })
+      },
+
+      __renderMask (h, maxWidth, marginLeft) {
+        return h('div', {
+          staticClass: 'q-placeholder__mask',
+          style: {
+            minHeight: this.rowHeight + 'px',
+            maxWidth: maxWidth,
+            marginLeft: marginLeft
+          }
+        })
+      },
+
+      __renderColumn (h, style, content) {
+        return h('div', {
+          staticClass: 'q-placeholder__column',
+          style: {
+            ...style
+          }
+        }, [
+          content
+        ])
+      },
+
+      __renderRow (h) {
+        let min = 50
+        let max = 95
+        let random = Math.round(Math.random() * (+max - +min) + +min)
+
+        let row = []
+        row.push(this.__renderDivider(h, '100%', this.dividerHeight + 'px'))
+        row.push(this.__renderMask(h, (100 - random + 1) + '%', random + '%'))
+        return row
+      },
+
+      __renderHeaderRows (h) {
+        let count = Math.floor(this.imageSize / (this.rowHeight + this.dividerHeight))
+        let remaining = this.imageSize - ((this.rowHeight + this.dividerHeight) * count)
+        return h('div', {
+          staticClass: 'q-placeholder__column'
+        }, [
+          ...[...Array(parseInt(count))]
+            .map((_, i) => i)
+            .map(idx => this.__renderRow(h)),
+          this.__renderDivider(h, '100%', remaining + 'px')
+        ])
+      },
+
+      __renderRows (h) {
+        return h('div', {
+          staticClass: 'q-placeholder__column'
+        }, [
+          this.__renderRow(h),
+          this.__renderRow(h),
+          this.__renderRow(h),
+          this.__renderRow(h),
+
+          this.__renderDivider(h, '100%', this.dividerHeight + 'px')
+        ])
+      },
+
+      __renderHead (h) {
+        const divider = this.__renderDivider(h, '100%', '100%')
+
+        const imageSize = this.imageSize + 'px'
+        return h('div', {
+          staticClass: 'q-placeholder__row',
+          style: {
+            overflow: 'hidden',
+            maxHeight: imageSize
+          }
+        }, [
+          this.__renderColumn(h, { maxWidth: '10px' }, divider),
+          this.__renderColumn(h, { maxWidth: imageSize, minHeight: imageSize }),
+          this.__renderColumn(h, { maxWidth: '10px' }, divider),
+          this.__renderHeaderRows(h)
+        ])
+      },
+
+      __renderBody (h) {
+        const divider = this.__renderDivider(h, '100%', '100%')
+
+        return h('div', {
+          staticClass: 'q-placeholder__row',
+          style: {
+            minHeight: '100px',
+            overflow: 'hidden'
+          }
+        }, [
+          this.__renderColumn(h, { maxWidth: '10px' }, divider),
+          this.__renderRows(h)
+        ])
       }
     },
 
@@ -88,8 +218,8 @@ export default function (ssrContext) {
         staticClass: this.classes,
         style: this.styles
       }, [
-        // ...this.generateText(h, (slot && slot[0].text) || this.src)
-        ...this.generateContent(h)
+        this.noHeader || this.__renderHead(h),
+        this.__renderBody(h)
       ])
     }
   })

@@ -2,7 +2,7 @@
   <div class="q-mx-sm">
     <q-placeholder
       animated
-      :image-size="70"
+      :image-size="100"
     />
   </div>
 </template>
