@@ -7,6 +7,7 @@
       <example-title title="Basics" />
       <example-card title="Basic" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
       <example-card title="Animated" name="Animated" :tag-parts="getTagParts(require('!!raw-loader!../examples/Animated.vue').default)" />
+      <example-card title="Image Size" name="ImageSize" :tag-parts="getTagParts(require('!!raw-loader!../examples/ImageSize.vue').default)" />
     </div>
     <q-page-scroller position="bottom-right" :scroll-offset="150" :offset="[18, 18]">
       <q-btn fab icon="keyboard_arrow_up" color="primary" />
@@ -43,6 +44,7 @@ export default {
     this.addToToc('Basics')
     this.addToToc('Basic', 2)
     this.addToToc('Animated', 2)
+    this.addToToc('Image Size', 2)
 
     this.toc = this.tempToc
   },
