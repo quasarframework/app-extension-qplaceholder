@@ -75,9 +75,14 @@ export default {
   components: {
     Basic: () => import('../examples/Basic'),
     Animated: () => import('../examples/Animated'),
-    NoHeader: () => import('../examples/NoHeader'),
+    Title: () => import('../examples/Title'),
+    TitleWidthHeight: () => import('../examples/TitleWidthHeight'),
+    Image2: () => import('../examples/Image'),
+    Avatar: () => import('../examples/Avatar'),
+    Random: () => import('../examples/Random'),
     ImageSize: () => import('../examples/ImageSize'),
     LineSizes: () => import('../examples/LineSizes'),
+    Rows: () => import('../examples/Rows'),
     Colors: () => import('../examples/Colors')
   },
 

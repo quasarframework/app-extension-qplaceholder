@@ -1,5 +1,8 @@
 <template>
   <div class="q-pa-sm">
-    <q-placeholder />
+    <q-placeholder
+      animated
+      title
+    />
   </div>
 </template>

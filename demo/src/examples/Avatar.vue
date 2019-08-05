@@ -1,8 +1,9 @@
 <template>
-  <div class="q-mx-sm">
+  <div class="q-pa-sm">
     <q-placeholder
       animated
-      no-header
+      image
+      avatar
     />
   </div>
 </template>
