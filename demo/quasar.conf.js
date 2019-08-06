@@ -100,7 +100,7 @@ module.exports = function (ctx) {
       watchOptions: {
         ignored: [
           'node_modules',
-          '!node_modules/hawkeye64/quasar-app-extension-qplaceholder'
+          '!node_modules/@quasar/quasar-app-extension-qplaceholder'
         ]
       }
     },

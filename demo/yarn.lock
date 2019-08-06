@@ -838,7 +838,7 @@
   resolved "https://registry.yarnpkg.com/@positron/stack-trace/-/stack-trace-1.0.0.tgz#14fcc712a530038ef9be1ce6952315a839f466a8"
   integrity sha1-FPzHEqUwA475vhzmlSMVqDn0Zqg=
 
-"@quasar/app@^1.0.0":
+"@quasar/app@^1.0.4":
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/@quasar/app/-/app-1.0.4.tgz#14e1ae6626e29df8bf6baef604552dcaf8aabbb2"
   integrity sha512-eNR9CYoii8GqS9Edb5TkqiOejuXHfE7oXkoBM+UDLgOAEgwpoWP9eshWvsxoMNLTRKrUK2PEV8i4lviXTlnErw==

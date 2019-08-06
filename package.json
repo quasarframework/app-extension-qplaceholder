@@ -1,5 +1,5 @@
 {
-  "name": "quasar-app-extension-qplaceholder",
+  "name": "@quasar/quasar-app-extension-qplaceholder",
   "version": "1.0.0-alpha.1",
   "description": "Placeholder generation for your Quasar App",
   "author": "Jeff Galbraith <jeff@quasar.dev>",

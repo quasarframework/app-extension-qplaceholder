@@ -7,7 +7,7 @@
 
 const extendConf = function (conf) {
   // make sure qplaceholder boot file is registered
-  conf.boot.push('~quasar-app-extension-qplaceholder/src/boot/qplaceholder.js')
+  conf.boot.push('~@quasar/quasar-app-extension-qplaceholder/src/boot/qplaceholder.js')
   console.log(` App Extension (qplaceholder) Info: 'Adding qplaceholder boot reference to your quasar.conf.js'`)
 
   // make sure boot & component files transpile
@@ -21,7 +21,7 @@ const extendConf = function (conf) {
   // conf.framework.directives.push('Scroll')
 
   // make sure qplaceholder css goes through webpack to avoid ssr issues
-  conf.css.push('~quasar-app-extension-qplaceholder/src/component/placeholder.styl')
+  conf.css.push('~@quasar/quasar-app-extension-qplaceholder/src/component/placeholder.styl')
   console.log(` App Extension (qplaceholder) Info: 'Adding placeholder.styl css reference to your quasar.conf.js'`)
 }
 
