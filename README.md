@@ -14,6 +14,12 @@ This work is currently in `beta` and there are expected changes while things get
 # Info
 QPlaceholder allows you to display a placeholder before your data arrives from your server.
 
+# Demo Project (source)
+Can be found [here](https://github.com/quasarframework/app-extension-qplaceholder/tree/master/demo).
+
+# Documentation and Examples
+Can be found [here](https://quasarframework.github.io/app-extension-qplaceholder).
+
 # Install
 To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
 ```

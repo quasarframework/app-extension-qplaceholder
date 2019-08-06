@@ -19,7 +19,7 @@
       </q-item-section>
     </q-item>
     <q-separator />
-    <q-item clickable tag="a" target="_blank" href="https://github.com/@quasar/app-extension-qplaceholder">
+    <q-item clickable tag="a" target="_blank" href="https://github.com/quasarframework/app-extension-qplaceholder">
       <q-item-section avatar>
         <q-icon name="extension" />
       </q-item-section>
