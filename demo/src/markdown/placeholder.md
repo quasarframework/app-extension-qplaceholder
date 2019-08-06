@@ -10,13 +10,13 @@ This work is currently in `beta` and there are expected changes while things get
 # Install
 To add this App Extension to your Quasar application, run the following (in your Quasar app folder):
 ```
-quasar ext add qplaceholder
+quasar ext add @quasar/qplaceholder
 ```
 
 # Uninstall
 To remove this App Extension from your Quasar application, run the following (in your Quasar app folder):
 ```
-quasar ext remove qplaceholder
+quasar ext remove @quasar/qplaceholder
 ```
 
 # Describe
