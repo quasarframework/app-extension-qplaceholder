@@ -23,11 +23,11 @@ quasar ext remove @quasar/qplaceholder
 (TBD) You can use `quasar describe QPlaceholder`
 
 # Docs
-Can be found [here](https://@quasar.github.io/app-extension-qplaceholder).
+Can be found [here](https://quasarframework.github.io/app-extension-qplaceholder).
 
 # Examples
-Can be found [here](https://@quasar.github.io/app-extension-qplaceholder/examples).
+Can be found [here](https://quasarframework.github.io/app-extension-qplaceholder/examples).
 
 # Demo (source) Project
-Can be found [here](https://github.com/@quasar/app-extension-qplaceholder/tree/master/demo).
+Can be found [here](https://github.com/quasarframework/app-extension-qplaceholder/tree/master/demo).
 
