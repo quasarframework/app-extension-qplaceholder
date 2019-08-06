@@ -27,7 +27,7 @@ quasar ext remove @quasar/qplaceholder
 ```
 
 # Describe
-You can use `quasar describe QPlaceholder`
+(TBD) You can use `quasar describe QPlaceholder`
 
 # Donate
 If you appreciate the work that went into this App Extension, please consider [donating to Quasar](https://donate.quasar.dev).

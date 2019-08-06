@@ -9,15 +9,6 @@
         <q-item-label caption>Documentation</q-item-label>
       </q-item-section>
     </q-item>
-    <!-- <q-item clickable to="/demo">
-      <q-item-section avatar>
-        <q-icon name="bolt" />
-      </q-item-section>
-      <q-item-section>
-        <q-item-label>QPlaceholder demo</q-item-label>
-        <q-item-label caption>Interactively play with properties</q-item-label>
-      </q-item-section>
-    </q-item> -->
     <q-item clickable to="/examples">
       <q-item-section avatar>
         <q-icon name="bolt" />
