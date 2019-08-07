@@ -1,5 +1,5 @@
 <template>
-  <div class="q-ma-sm">
+  <div class="q-pa-sm">
     <q-placeholder
       animated
       random
