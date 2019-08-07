@@ -1,5 +1,5 @@
 <template>
-  <div class="q-mx-sm">
+  <div class="q-pa-sm">
     <q-placeholder
       animated
       :row-height="20"
