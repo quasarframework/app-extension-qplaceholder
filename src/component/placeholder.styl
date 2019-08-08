@@ -28,8 +28,8 @@
     margin-top 16px
     height 16px
     width 100%
-    margin-block-start: .5em;
-    margin-block-end: .5em;
+    margin-block-start .5em
+    margin-block-end .5em
 
   &__paragraph
     outline none
@@ -46,6 +46,9 @@
     width 100%
     margin 0
     padding 0
+
+    &:last-child
+      margin-bottom .5em
 
   &__row
     display flex
@@ -79,10 +82,4 @@
   background linear-gradient(to right, var(--placeholder-color, #eee) 8%, var(--placeholder-shimmercolor, #ddd) 18%, var(--placeholder-color, #eee) 33%)
   animation placeholderShimmer 1.4s ease infinite
   background-size 1000% 100%
-
   animation-duration 2s
-  // animation-fill-mode forwards
-  // animation-iteration-count infinite
-  // animation-name placeholderShimmer
-  // animation-timing-function linear
-  // background linear-gradient(to right, var(--placeholder-color, #eee) 8%, var(--placeholder-shimmercolor, #ddd) 18%, var(--placeholder-color, #eee) 33%)
