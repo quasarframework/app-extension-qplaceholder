@@ -5,6 +5,10 @@
 **QPlaceholder** allows for creating placeholder elements that are displayed before your data arrives from the server.
 
 All line lengths are randomly generated between 50-95%, so no two QPlaceholder components will look exactly alike.
+
+::: warning
+When you use the `animated` property, remember that you will be taking a performance hit. It looks nice, but make sure you're willing to take the performace trade-off before using it.
+:::
       </q-markdown>
       <example-title title="Basics" />
       <example-card title="Basic" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
