@@ -74,7 +74,6 @@ export default function (ssrContext) {
     },
 
     methods: {
-
       __renderTitle (h) {
         if (this.title !== true) return ''
 
