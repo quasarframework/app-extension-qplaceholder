@@ -3,7 +3,7 @@
     <section class="page-header">
       <h1 class="project-name">QPlaceholder</h1>
       <h2 class="project-tagline"></h2>
-      <q-btn type="a" href="https://github.com/@quasar/app-extension-qplaceholder" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
+      <q-btn type="a" href="https://github.com/quasarframework/app-extension-qplaceholder" target="_blank" class="btn" label="View on GitHub" no-caps flat/>
       <q-btn to="/docs" class="btn" label="Docs" no-caps flat/>
       <q-btn to="/examples" class="btn" label="Examples" no-caps flat/>
       <q-btn type="a" href="https://donate.quasar.dev" target="_blank" class="btn" label="Donate" no-caps flat/>
