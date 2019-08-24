@@ -1,6 +1,6 @@
 // @import './placeholder-variables'
 
-.q-placeholder
+.q-placeholder2
   position relative
   overflow: hidden;
   background-color var(--placeholder-bgcolor, #fff)
@@ -70,7 +70,13 @@
   &__divider
     background-color var(--placeholder-bgcolor, #fff)
 
-@keyframes placeholderShimmer
+  &__animated-background
+    background linear-gradient(to right, var(--placeholder-color, #eee) 8%, var(--placeholder-shimmercolor, #ddd) 18%, var(--placeholder-color, #eee) 33%)
+    animation q-placeholder2__shimmer 1.4s ease infinite
+    background-size 1000% 100%
+    animation-duration 2s
+
+@keyframes q-placeholder2__shimmer
   0%{
     background-position 100% 50%
   }
@@ -78,8 +84,3 @@
     background-position 0 50%
   }
 
-.animated-background
-  background linear-gradient(to right, var(--placeholder-color, #eee) 8%, var(--placeholder-shimmercolor, #ddd) 18%, var(--placeholder-color, #eee) 33%)
-  animation placeholderShimmer 1.4s ease infinite
-  background-size 1000% 100%
-  animation-duration 2s
