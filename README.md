@@ -9,6 +9,7 @@ QPlaceholder (@quasar/qplaceholder)
 
 QPlaceholder is an `UI App Extension` for [Quasar Framework v1](https://v1.quasar-framework.org/). It will not work with legacy versions of Quasar Framework.
 
+![QPlaceholder](https://raw.githubusercontent.com/quasarframework/app-extension-qplaceholder/dev/demo/src/statics/qplaceholder2.png)
 
 This work is currently in `beta` and there are expected changes while things get worked out. Your help with testing is greatly appreciated. Suggestions and PRs welcomed.
 

@@ -74,13 +74,12 @@ export default function (ssrContext) {
     },
 
     methods: {
-
       __renderTitle (h) {
         if (this.title !== true) return ''
 
         return h('h3', {
-          staticClass: 'q-placeholder__title' +
-            (this.animated === true ? ' animated-background' : ''),
+          staticClass: 'q-placeholder2__title' +
+            (this.animated === true ? ' q-placeholder2__animated-background' : ''),
           style: {
             width: this.titleWidth + '%',
             minHeight: this.titleHeight + 'px',
@@ -97,8 +96,8 @@ export default function (ssrContext) {
         let random = Math.round(Math.random() * (+max - +min) + +min)
 
         return h('ul', {
-          staticClass: 'q-placeholder__line' +
-            (this.animated === true ? ' animated-background' : ''),
+          staticClass: 'q-placeholder2__line' +
+            (this.animated === true ? ' q-placeholder2__animated-background' : ''),
           style: {
             minHeight: this.rowHeight + 'px',
             marginTop: this.rowHeight + 'px',
@@ -116,7 +115,7 @@ export default function (ssrContext) {
 
       __renderParagraph (h) {
         return h('ul', {
-          staticClass: 'q-placeholder__paragraph'
+          staticClass: 'q-placeholder2__paragraph'
         }, [
           this.__renderRows(h)
         ])
@@ -124,7 +123,7 @@ export default function (ssrContext) {
 
       __renderContent (h) {
         return h('div', {
-          staticClass: 'q-placeholder__content q-placeholder__column',
+          staticClass: 'q-placeholder2__content q-placeholder2__column',
           style: {
             minHeight: '16px',
             overflow: 'hidden'
@@ -139,7 +138,7 @@ export default function (ssrContext) {
         if (this.image !== true) return ''
 
         return h('div', {
-          staticClass: 'q-placeholder__sidebar q-placeholder__column',
+          staticClass: 'q-placeholder2__sidebar q-placeholder2__column',
           style: {
             minWidth: this.imageSize + 'px',
             maxWidth: this.imageSize + 'px',
@@ -149,8 +148,8 @@ export default function (ssrContext) {
           }
         }, [
           h('div', {
-            staticClass: 'q-placeholder__avatar' +
-              (this.avatar === true ? ' q-placeholder__avatar--circle' : '') +
+            staticClass: 'q-placeholder2__avatar' +
+              (this.avatar === true ? ' q-placeholder2__avatar--circle' : '') +
               (this.animated === true ? ' animated-background' : ''),
             style: {
               '--placeholder-color': calculateColor(this.color),
@@ -164,7 +163,7 @@ export default function (ssrContext) {
 
     render (h) {
       return h('div', {
-        staticClass: 'q-placeholder q-placeholder__row', // this.classes,
+        staticClass: 'q-placeholder2 q-placeholder2__row', // this.classes,
         style: this.styles
       }, [
         this.__renderImage(h),
