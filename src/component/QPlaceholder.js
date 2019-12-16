@@ -150,7 +150,7 @@ export default function (ssrContext) {
           h('div', {
             staticClass: 'q-placeholder2__avatar' +
               (this.avatar === true ? ' q-placeholder2__avatar--circle' : '') +
-              (this.animated === true ? ' animated-background' : ''),
+              (this.animated === true ? ' q-placeholder2__animated-background' : ''),
             style: {
               '--placeholder-color': calculateColor(this.color),
               '--placeholder-bgcolor': calculateColor(this.backgroundColor),
