@@ -1,3 +1,5 @@
+> Note: QPlaceholder is now deprecated. Use the QSkeleton UI component built into Quasar Framework.
+
 QPlaceholder (@quasar/qplaceholder)
 ===
 
